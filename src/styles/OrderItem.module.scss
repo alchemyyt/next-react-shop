@@ -1,0 +1,41 @@
+@import 'vars';
+
+.OrderItem {
+	display: grid;
+	grid-template-columns: auto 1fr auto auto;
+	gap: 16px;
+	margin-bottom: 24px;
+	align-items: center;
+}
+.OrderItem figure {
+	margin: 0;
+}
+.order-item-img-ctn {
+	width: 70px;
+	height: 70px;
+	position: relative;
+}
+.OrderItem p:nth-child(2) {
+	color: $--very-light-pink;
+}
+.OrderItem p:nth-child(3) {
+	font-size: $--md;
+	font-weight: bold;
+}
+.more-clickable-area-ctn{
+	background-color: $--black;
+	width: 18px;
+	height: 18px;
+	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	-ms-border-radius: 50%;
+	-o-border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 4px;
+}
+.more-clickable-area{
+	background-color: red;
+}

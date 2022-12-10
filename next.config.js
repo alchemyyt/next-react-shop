@@ -1,7 +1,6 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
+module.exports = {
   reactStrictMode: true,
-  swcMinify: true,
+  images: {//ESTO es SUPER importante porque si no no agarra las imagenes del api
+    domains: ['placeimg.com','api.lorem.space','vuzoon.com','www.complementosdelcafe.com'],
+  },
 }
-
-module.exports = nextConfig
