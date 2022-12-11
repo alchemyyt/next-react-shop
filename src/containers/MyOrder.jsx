@@ -12,7 +12,7 @@ const MyOrder = () => {
 		const reducer = (accumalator, currentValue) => accumalator + currentValue.price;
 		const sum = state.cart.reduce(reducer, 0);
 		return sum;
-	}
+	};
 
 	return (
 		<aside className={styles.MyOrder}>
@@ -40,6 +40,6 @@ const MyOrder = () => {
 			</div>
 		</aside>
 	);
-}
+};
 
 export default MyOrder;

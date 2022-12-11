@@ -15,5 +15,6 @@ module.exports = {
   ],
   rules: {
     'semi': ['error', 'always'],
+    'prettier/prettier': 0,//esta es la regla para ignorar el estanda de prettier con 0 se ignora con 1 es un warning y con 2 es un error
   }
 }

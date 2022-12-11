@@ -20,29 +20,29 @@ const Header = () => {
 					<Image src={menu/* Esto podria llevar otra clase para canviar sus estilos consultar en notion */} alt="menu"  />
 				</div>
 				<div className={styles["navbar-left"]}>
-					<Link href="/" >{/*Link al inico */}
+					<Link href="/" passHref>{/*Link al inico */}
 						<div className={styles['nav-logo']}>
 							<Image src={logo} alt="logo"  width={100} height={60}/>
 						</div>
 					</Link>
 					<ul>
 						<li>
-							<a href="/">All</a>
+							<Link href="/">All</Link>
 						</li>
 						<li>
-							<a href="/">Clothes</a>
+							<Link href="/">Clothes</Link>
 						</li>
 						<li>
-							<a href="/">Electronics</a>
+							<Link href="/">Electronics</Link>
 						</li>
 						<li>
-							<a href="/">Furnitures</a>
+							<Link href="/">Furnitures</Link>
 						</li>
 						<li>
-							<a href="/">Toys</a>
+							<Link href="/">Toys</Link>
 						</li>
 						<li>
-							<a href="/">Others</a>
+							<Link href="/">Others</Link>
 						</li>
 					</ul>
 				</div>
@@ -52,7 +52,7 @@ const Header = () => {
             className={styles["navbar-email"]}
             onClick={
               toggleMenu /*cuando le demos click al correo se dispara la funcion*/
-            }
+            } aria-hidden="true"//aria-hidden es para resolver un error de eslint El aria-hidden estado indica si el elemento está expuesto a una API de accesibilidad.
           >
             platzi@example.com
           </li>
@@ -63,7 +63,7 @@ const Header = () => {
 							toggleOrder(
                   !toggleOrder
                 ) 
-            }
+            } aria-hidden="true" 
           >
             <Image src={shoppingCart} alt="shopping cart" />
             {
@@ -78,6 +78,6 @@ const Header = () => {
 			{state.orderIsOpen && <MyOrder />}
 		</>
 	);
-}
+};//este punto y coma resuelve un error de eslint
 
 export default Header;
