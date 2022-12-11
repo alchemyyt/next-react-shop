@@ -14,7 +14,9 @@ const ProductItem = ({ product }) => {
 
   return (
     <div className={styles.ProductItem}>
-      <Image src={product.images[0]} alt={product.title} />
+      <div className={styles['Product-Item-Img-Ctn']}>
+        <Image src={product.images[0]} alt={product.title} layout='fill'/>
+      </div>
       <div className={styles['product-info']}>
         <div>
           <p>${product.price}</p>
