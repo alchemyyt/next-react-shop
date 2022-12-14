@@ -1,6 +1,17 @@
-module.exports = {
+/** @type {import('next').NextConfig} */
+
+const nextConfig = {
   reactStrictMode: true,
-  images: {//ESTO es SUPER importante porque si no no agarra las imagenes del api
-    domains: ['placeimg.com','api.lorem.space','vuzoon.com','www.complementosdelcafe.com','images.pexels.com'],
+  swcMinify: true,
+  images: {
+    domains: ['api.lorem.space', 'cdn.pixabay.com', 'placeimg.com', 'www.libreriahuequito.com', 'thumbs.dreamstime.com'],
   },
-}
+};
+
+const withPWA = require('next-pwa')({
+  dest: 'public',
+  disable: process.env.NODE_ENV === 'development',
+  register: true,
+});
+
+module.exports = withPWA(nextConfig);

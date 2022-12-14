@@ -9,6 +9,7 @@ class MyDocument extends Document {
         {/*estas no son etiquetas normales de html son etiquetas que sacamos de componente document de next para trabajar el seo de las etiquetas de html verdaderas, Para diferenciarlas es que esta en mayusculas la primera letra*/}
         <Head>
           <meta charSet="utf-8" /*Este seo se compartira en todas las paginas*/ />
+          <link rel="manifest" href="/manifest.json"/*Linkeamos el archivo manifest*/ />
         </Head>
         <body>
           {/* Este si es una etiqueta normal */}
